@@ -19,28 +19,28 @@ result_list.append(num)
 
 # Function for calculating 3x+1
 def calculate(num):
-    
+  
     # Base case
     if num == 1:
         return
 
-    # Use a recursive function call with the new number
+    # Calculate even or uneven numbers
     elif num % 2 == 0:
         new_num = int(num / 2)
-        result_list.append(new_num)
-        calculate(new_num)
-        return
 
-    # Use a recursive function call with the new number
     else:
         new_num = int(num * 3 + 1)
-        result_list.append(new_num)
-        calculate(new_num)
-        return
+    
+    # Append calculated number to list and use a recursive function call
+    result_list.append(new_num)
+    calculate(new_num)
+    return
 
 # Run the function with user input
 calculate(num)
 
 # Plot graph using list with calculated numbers
 plt.plot(result_list)
+plt.xlabel("Iterations")
+plt.ylabel("Number")
 plt.show()
