@@ -43,4 +43,6 @@ calculate(num)
 plt.plot(result_list)
 plt.xlabel("Iterations")
 plt.ylabel("Number")
+# plt.savefig saves the graph as a .PNG file
+plt.savefig(f"3x+1Number{num}")
 plt.show()
